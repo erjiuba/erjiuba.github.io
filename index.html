@@ -4,6 +4,21 @@
 
 带颜色统计代码
 <script language="JavaScript">
+
+
+
+
+
+
+
+
+
+
+
+var date1=new Date();  //开始时间
+document.write(date1)
+
+
 <!--
 var caution = false
 function setCookie(name, value, expires, path, domain, secure) {
@@ -51,9 +66,11 @@ visits = 1
 else
 visits = parseInt(visits) + 1
 setCookie("counter", visits, now)
-document.write("<font size=6 color=red>欢迎您，您是第：" + visits + " 个访问该站点的访客")
+document.write("<font size=6 color=red>欢迎您，您是第：" + visits + " 个访问该站点的访客" + new Date())
 // -->
 </script>
+
+
 
 
 
@@ -64,20 +81,7 @@ document.write("<font size=6 color=red>欢迎您，您是第：" + visits + " �
  <meta charset="gb2312">
  <title></title>
 <script type="text/javascript">
- window.onload=function(){
-  setInterval(function(){
-   var date=new Date();
-   var year=date.getFullYear(); //获取当前年份
-   var mon=date.getMonth()+1; //获取当前月份
-   var da=date.getDate(); //获取当前日
-   var day=date.getDay(); //获取当前星期几
-   var h=date.getHours(); //获取小时
-   var m=date.getMinutes(); //获取分钟
-   var s=date.getSeconds(); //获取秒
-   var d=document.getElementById('Date'); 
-   d.innerHTML='当前时间:'+year+'年'+mon+'月'+da+'日'+'星期'+day+' '+h+':'+m+':'+s;
-  },1000) 
- }
+ 
 </script>
 </head>
 <body>
