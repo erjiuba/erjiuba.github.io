@@ -1,1 +1,40 @@
-# erjiuba.github.io
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>原生AJAX</title>
+<style>
+.container {text-align: center;margin:20px;font-size:14px;line-height:2;}
+button{border:solid 1px #ddd;border-radius:4px;padding:5px 20px;cursor: pointer}
+p{margin-top:20px;}
+</style>
+</head>
+<body>
+<div class="container">
+  <p id="result"></p>
+</div>
+<script>
+function ajax()
+{
+    var xhr;
+    xhr=new XMLHttpRequest();
+
+    xhr.onreadystatechange=function()
+    {
+        if (xhr.readyState==4 && xhr.status==200)
+        {
+            document.getElementById('result').innerText = xhr.responseText;
+        }
+    };
+    xhr.open("GET","http://sanliuyi.iok.la:8081/1.php",true);
+    xhr.send();
+}
+ajax();
+</script>
+</body>
+</html>
+
+
+
+
+
