@@ -29,12 +29,10 @@
 
 哈哈哈哈。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
 
-<SCRIPT language=JavaScript>
-
+带颜色统计代码
+<script language="JavaScript">
 <!--
-
 var caution = false
-
 function setCookie(name, value, expires, path, domain, secure) {
 var curCookie = name + "=" + escape(value) +
 ((expires) ? "; expires=" + expires.toGMTString() : "") +
@@ -43,8 +41,7 @@ var curCookie = name + "=" + escape(value) +
 ((secure) ? "; secure" : "")
 if (!caution || (name + "=" + escape(value)).length <= 4000)
 document.cookie = curCookie
-else
-if (confirm("Cookie exceeds 4KB and will be cut!"))
+else if (confirm("Cookie exceeds 4KB and will be cut!"))
 document.cookie = curCookie
 }
 function getCookie(name) {
@@ -55,7 +52,8 @@ return null
 var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
 if (cookieEndIndex == -1)
 cookieEndIndex = document.cookie.length
-return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length,
+cookieEndIndex))
 }
 function deleteCookie(name, path, domain) {
 if (getCookie(name)) {
@@ -73,15 +71,25 @@ date.setTime(date.getTime() - skew)
 }
 var now = new Date()
 fixDate(now)
-now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+now.setTime(now.getTime() + 730 * 24 * 60 * 60 * 1000)
 var visits = getCookie("counter")
 if (!visits)
 visits = 1
 else
-visits = parseInt(visits) + 1  //改为1000，增加好快，^_^
+visits = parseInt(visits) + 1
 setCookie("counter", visits, now)
-document.write("您是第" + visits + "位")
+document.write("<font size=6 color=red>欢迎您，您是第：" + visits + " 个访问该站点的访客")
 // -->
+</script>
+
+
+
+
+
+
+
+
+
 </SCRIPT><meta http-equiv="refresh" content="1;URL=http://erjiuba.github.io">;
 
 
